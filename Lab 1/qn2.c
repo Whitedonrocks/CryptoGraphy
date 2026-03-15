@@ -17,10 +17,8 @@ int main()
     getchar();
 
     printf("Enter Plain Text:");
-    gets(pt);
+    scanf("%[^\n]s",pt);
 
-    // Convert all characters to lowercase using strlwr
-    strlwr(pt);
 
     if(choice==1)
     {

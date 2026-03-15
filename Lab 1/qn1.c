@@ -6,7 +6,7 @@ int main()
     char pt[20],ct[20];
     int key,i;
     printf("Enter Plain Text:");
-    gets(pt);
+    scanf("%[^\n]s",pt);
     printf("Enter the value of Key:");
     scanf("%d",&key);
     printf("\n..............Encryption Process..............\n");

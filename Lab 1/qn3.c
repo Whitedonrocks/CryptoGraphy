@@ -6,9 +6,9 @@ int main()
     char pt[20], ct[20], key[20], key1[20];
     int i, lenkey, lenpt;
     printf("Enter Plain Text:");
-    gets(pt);
+    scanf("%[^\n]s",pt);
     printf("Enter the value of Key:");
-    gets(key);
+    scanf("%s",key);
     lenkey = strlen(key);
     lenpt = strlen(pt);
     if(lenkey != lenpt)
