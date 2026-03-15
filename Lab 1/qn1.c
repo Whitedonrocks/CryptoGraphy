@@ -22,6 +22,7 @@ int main()
         }
         ct[i]=(((pt[i]-97)+key)%26)+65;
     }
+    ct[i] = '\0';
     printf("\nCipher Text:");
     puts(ct);
     printf("\n..............Decryption Process..............\n");
@@ -37,6 +38,7 @@ int main()
         }
         pt[i]=(((26+ct[i]-65)-key)%26)+97;
     }
+     pt[i] = '\0';
     printf("\nPlain Text:");
     puts(pt);
     return 0;
