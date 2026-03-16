@@ -30,7 +30,6 @@ int main()
                 scanf("%d",&key2[i][j]);
             }
 
-        // Pad with 'x' if length is odd
         len=strlen(pt);
         if(len%2!=0)
         {
@@ -71,7 +70,6 @@ int main()
             printf("\n");
         }
 
-        // Determinant and its modular inverse
         det=((key2[0][0]*key2[1][1]-key2[0][1]*key2[1][0])%26+26)%26;
         detInv=-1;
         for(a=1;a<26;a++)
@@ -81,13 +79,11 @@ int main()
                 break;
             }
 
-        // Adjugate of 2x2
         invKey2[0][0]= key2[1][1];
         invKey2[0][1]=-key2[0][1];
         invKey2[1][0]=-key2[1][0];
         invKey2[1][1]= key2[0][0];
 
-        // Decrypt
         for(i=0;i<len;i+=2)
         {
             int c0=ct[i]-65;
@@ -109,7 +105,6 @@ int main()
                 scanf("%d",&key3[i][j]);
             }
 
-        // Pad with 'x' to make length multiple of 3
         len=strlen(pt);
         while(len%3!=0)
         {
@@ -128,7 +123,6 @@ int main()
             printf("\n");
         }
 
-        // Encrypt
         for(i=0;i<len;i+=3)
         {
             int p0=pt[i]-97;
@@ -152,13 +146,11 @@ int main()
             printf("\n");
         }
 
-        // Determinant of 3x3
         det = key3[0][0]*(key3[1][1]*key3[2][2]-key3[1][2]*key3[2][1])
              -key3[0][1]*(key3[1][0]*key3[2][2]-key3[1][2]*key3[2][0])
              +key3[0][2]*(key3[1][0]*key3[2][1]-key3[1][1]*key3[2][0]);
         det=((det%26)+26)%26;
 
-        // Modular inverse of determinant
         detInv=-1;
         for(a=1;a<26;a++)
             if((det*a)%26==1)
@@ -167,7 +159,6 @@ int main()
                 break;
             }
 
-        // Cofactor matrix
         cof3[0][0]= (key3[1][1]*key3[2][2]-key3[1][2]*key3[2][1]);
         cof3[0][1]=-(key3[1][0]*key3[2][2]-key3[1][2]*key3[2][0]);
         cof3[0][2]= (key3[1][0]*key3[2][1]-key3[1][1]*key3[2][0]);
@@ -178,12 +169,10 @@ int main()
         cof3[2][1]=-(key3[0][0]*key3[1][2]-key3[0][2]*key3[1][0]);
         cof3[2][2]= (key3[0][0]*key3[1][1]-key3[0][1]*key3[1][0]);
 
-        // Inverse key = detInv * transpose(cofactor) mod 26
         for(i=0;i<3;i++)
             for(j=0;j<3;j++)
                 invKey3[i][j]=(detInv*((cof3[j][i]%26+26)%26))%26;
 
-        // Decrypt
         for(i=0;i<len;i+=3)
         {
             int c0=ct[i]-65;
