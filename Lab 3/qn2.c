@@ -89,8 +89,9 @@ int main() {
     int output[32];
 
     applySbox(input, output);
-    // Print input in groups of 6
-    printf("Input  (48 bits): ");
+
+	// Print input in groups of 6
+    printf("\nInput  (48 bits): ");
     for (int i = 0; i < 8; i++) {
         for (int j = 0; j < 6; j++)
             printf("%d", input[i * 6 + j]);
@@ -98,17 +99,8 @@ int main() {
     }
     printf("\n");
 
-    // Print output in groups of 4
-    printf("Output (32 bits): ");
-    for (int i = 0; i < 8; i++) {
-        for (int j = 0; j < 4; j++)
-            printf("%d", output[i * 4 + j]);
-        if (i < 7) printf(" ");
-    }
-    printf("\n\n");
-
-    // Print mapping for each S-box
-    printf("S-box Mapping:\n\n");
+	// Print mapping for each S-box
+    printf("\nS-box Mapping:\n\n");
     for (int i = 0; i < 8; i++) {
         printf("  S%d:  ", i + 1);
         for (int j = 0; j < 6; j++) printf("%d", input[i * 6 + j]);
@@ -116,6 +108,15 @@ int main() {
         for (int j = 0; j < 4; j++) printf("%d", output[i * 4 + j]);
         printf("\n");
     }
+
+    // Print output in groups of 4
+    printf("\nOutput (32 bits): ");
+    for (int i = 0; i < 8; i++) {
+        for (int j = 0; j < 4; j++)
+            printf("%d", output[i * 4 + j]);
+        if (i < 7) printf(" ");
+    }
+    printf("\n\n");
 
     return 0;
 }

@@ -51,7 +51,7 @@ int main()
             if(matrix[i][j]==1)
                 printf("%c",pt[j]);
             else
-                printf(".");
+                printf("--");
         }
         printf("\n");
     }
@@ -111,7 +111,7 @@ int main()
             if(matrix[i][j]==1)
                 printf("%c",rails[i][railIdx[i]++]);
             else
-                printf(".");
+                printf("--");
         }
         printf("\n");
     }
