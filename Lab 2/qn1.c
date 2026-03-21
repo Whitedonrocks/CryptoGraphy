@@ -1,11 +1,12 @@
 // WAP To implement OTP Cipher technique.
 #include<stdio.h>
+#include<stdlib.h>
 #include<string.h>
 int main()
 {
     char pt[20], ct[20], key1[20];
     int i, lenkey, lenpt;
-    printf("Enter Plain Text:");
+    printf("\nEnter Plain Text:");
     scanf("%[^\n]s",pt);
     for(i = 0; i < strlen(pt); i++)
     {

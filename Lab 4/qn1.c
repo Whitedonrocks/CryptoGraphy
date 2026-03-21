@@ -6,7 +6,7 @@
 int main() {
     int n, a, additive_inverse;
     
-    printf("Enter the value of n: ");
+    printf("\nEnter the value of n: ");
     scanf("%d", &n);
     
     printf("Enter the Number: ");

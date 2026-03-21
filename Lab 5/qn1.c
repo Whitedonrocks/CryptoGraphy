@@ -66,7 +66,7 @@ int main() {
     int n;
     int iter = 5;
 
-    printf("Enter number: ");
+    printf("\nEnter number: ");
     scanf("%d", &n);
 
     if (isPrime(n, iter))

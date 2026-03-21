@@ -10,7 +10,7 @@
         int i,j,len,r1,c1,r2,c2;
         int idx=0;
 
-        printf("Enter Plain Text:");
+        printf("\nEnter Plain Text:");
         scanf("%[^\n]s",pt);
         for(i=0;i<strlen(pt);i++)
             pt[i]=tolower(pt[i]);

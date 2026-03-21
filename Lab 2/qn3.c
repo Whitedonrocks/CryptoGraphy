@@ -8,7 +8,7 @@ int main()
     int key,i,j,len;
     int rail,dir;
 
-    printf("Enter Plain Text:");
+    printf("\nEnter Plain Text:");
     scanf("%[^\n]s",pt);
     for(i=0;i<strlen(pt);i++)
         pt[i]=tolower(pt[i]);
@@ -51,7 +51,7 @@ int main()
             if(matrix[i][j]==1)
                 printf("%c",pt[j]);
             else
-                printf("--");
+                printf("-");
         }
         printf("\n");
     }
@@ -111,7 +111,7 @@ int main()
             if(matrix[i][j]==1)
                 printf("%c",rails[i][railIdx[i]++]);
             else
-                printf("--");
+                printf("-");
         }
         printf("\n");
     }

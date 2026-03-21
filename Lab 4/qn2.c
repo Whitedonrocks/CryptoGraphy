@@ -35,7 +35,7 @@ int extended_gcd_table(int n, int a, int *x, int print_table) {
 int main() {
     int n, a, x, y, gcd;
 
-    printf("Enter the value of n: ");
+    printf("\nEnter the value of n: ");
     scanf("%d", &n);
 
     printf("Enter the value of a: ");
